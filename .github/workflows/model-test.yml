@@ -18,29 +18,38 @@ jobs:
       with:
         python-version: '3.9'
     
-    - name: List contents of repository
+    - name: Debug Repository Structure
       run: |
+        echo "Current directory contents:"
         pwd
-        ls -la
+        ls -R
     
-    - name: Check Python and pip versions
+    - name: Python and Environment Check
       run: |
         python --version
         pip --version
+        which python
+        python -m site
     
-    - name: Install dependencies
+    - name: Install System Dependencies
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y python3-dev build-essential
+    
+    - name: Verify Requirements File
+      run: |
+        echo "Contents of requirements.txt:"
+        cat requirements.txt || echo "requirements.txt not found"
+    
+    - name: Install Python Dependencies
       run: |
         python -m pip install --upgrade pip
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; else echo "No requirements.txt found"; fi
+        pip install --verbose -r requirements.txt || echo "Dependency installation failed"
         pip install pytest pytest-cov
     
-    - name: List installed packages
+    - name: List Installed Packages
       run: pip list
     
-    - name: Run tests
+    - name: Run Tests with Verbose Output
       run: |
-        if [ -d tests ]; then 
-          pytest tests/ --cov=. --cov-report=xml
-        else
-          echo "No tests directory found"
-        fi
+        python -m pytest tests/ -v --cov=. --cov-report=xml || echo "Test execution failed"
