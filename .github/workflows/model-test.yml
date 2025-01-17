@@ -1,0 +1,29 @@
+name: Model Testing   # This is what shows up in your GitHub Actions tab
+
+on:   # This section defines when the workflow runs
+  push:
+    branches: [ main ]   # Runs when you push code to main branch
+  pull_request:
+    branches: [ main ]   # Runs when someone creates a pull request to main
+
+jobs:
+  test:   # Defines a job called "test"
+    runs-on: ubuntu-latest   # Uses Ubuntu as the testing environment
+
+    steps:   # List of steps to execute
+    - uses: actions/checkout@v2   # Gets your code from GitHub
+    
+    - name: Set up Python   # Sets up Python environment
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.9.6'   # Your Python version is correctly set
+    
+    - name: Install dependencies   # Installs required packages
+      run: |
+        python -m pip install --upgrade pip
+        pip install -r requirements.txt   # Installs from your requirements.txt
+        pip install pytest pytest-cov   # Installs testing packages
+    
+    - name: Run tests   # Runs your tests
+      run: |
+        pytest tests/ --cov=. --cov-report=xml
