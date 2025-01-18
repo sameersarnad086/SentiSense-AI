@@ -2,10 +2,10 @@ SentiSenseAI: Advanced Sentiment Analysis Platform
 Project Overview
 SentiSenseAI is a cutting-edge machine learning application designed to provide nuanced sentiment analysis of text data. By leveraging state-of-the-art natural language processing techniques, our platform offers precise emotional insights across various textual inputs.
 
-🚀 Key Features
+🚀 Key Features :
 Sentiment Analysis Capabilities, Real-time sentiment prediction, Multi-dimensional emotional analysis, High-accuracy machine learning model, User-friendly web interface.
 
-🛠 Technology Stack
+🛠 Technology Stack:
 Core Technologies
 
 Python
@@ -18,7 +18,7 @@ Natural Language Processing
 
 GitHub Actions for CI/CD
 
-📦 Project Structure
+📦 Project Structure:
 Key Components
 
 Reviewsapp.py: Streamlit web application interface
@@ -29,7 +29,7 @@ best_model.safetensors: Pre-trained model weights
 
 requirements.txt: Project dependencies
 
-🔧 Installation and Setup
+🔧 Installation and Setup:
 Prerequisites
 
 Python 3.9+
@@ -49,21 +49,21 @@ Run the application
 streamlit run app.py
 
 
-🧪 Testing
+🧪 Testing: 
 Continuous Integration
 
 Automated testing via GitHub Actions
 Comprehensive test coverage
 Model performance validation
 
-📊 Model Performance
+📊 Model Performance:
 Sentiment Classification
 
 Supports multiple sentiment categories
 High precision and recall
 Robust against variations in input text
 
-🤝 Contributing
+🤝 Contributing: 
 How to Contribute
 
 Fork the repository
@@ -73,7 +73,7 @@ Push to the branch
 Create a Pull Request
 
 
-🔗 Contact (Let me know your thoughts)
+🔗 Contact (Let me know your thoughts) :
 
 Sameer Sarnad 
 
