@@ -200,7 +200,7 @@ def display_header():
                    padding: 20px 0 10px 0; 
                    font-size: 2.2em; 
                    font-weight: 600;'>
-            🎯 ProductReview Emotion Analyzer
+            🎯 SentiSenseAI : The Emotion Behind Every Customer Review
         </h1>
         """, unsafe_allow_html=True)
     
@@ -217,14 +217,14 @@ def display_header():
             """, unsafe_allow_html=True)
         
         # Collapsible description section with enhanced formatting
-        with st.expander("📖 About this Model - Understanding the Emotion Analyzer"):
+        with st.expander("📖 SentiSenseAI - Understanding the Emotion Behind Every Customer Review"):
             st.markdown("""
             <div style='font-size: 0.8em; line-height: 1.6; color: #2C3E50;'>
             
-            <p><strong>Product review emotion analyzer</strong> represents a sophisticated approach to understanding customer sentiment. 
+            <p><strong>SentiSenseAI</strong> represents a sophisticated approach to understanding customer sentiment. 
             Let's explore how it works:</p>
             
-            <p>Our emotion classification system utilizes <strong>BERT</strong> (Bidirectional Encoder Representations from Transformers), 
+            <p>SentisenseAI utilizes <strong>BERT</strong> (Bidirectional Encoder Representations from Transformers), 
             an advanced AI language model that excels at understanding context and nuances in text. This model has been 
             carefully fine-tuned on 1,500 expertly labeled luxury fashion reviews to ensure accurate emotion detection 
             specifically within this domain.</p>
